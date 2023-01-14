@@ -19,16 +19,16 @@ int main()
 			count1++;
 		if(str[i]>='0' && str[i]<='9')
 			count2++;
-		if((str[i]=='1' || str[i]=='0') && !(str[i]>='2' && str[i]<='9'))
+		if((str[i]=='0' || str[i]=='1') && !(str[i]>='2' && str[i]<='9'))
 			count3++;
 	}
 	if(n==count1)
 		printf("Only Alphabet\n");
-	if(n==count2)
-		printf("Only Digit\n");
 	if(n==count3)
 		printf("Only 0s and 1s\n");
+	else if(n==count2)
+		printf("Only Digit\n");
 	if(n!=count1 && n!=count2 && n!=count3)
-		printf("Nothing\n");
+		printf("Nothing");
 	return 0;
 }
